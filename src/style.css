@@ -1,7 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 h1.value {
-  font-size: 150px !important;
+  font-size: 150px;
+  font-weight: bolder;
 }
 
 .suit {
