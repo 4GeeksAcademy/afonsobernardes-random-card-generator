@@ -22,7 +22,7 @@ const VALUES = [
   "A"
 ];
 
-window.onload = function() {
+function changeCard() {
   // Generate random SUIT and random card VALUE.
   let randomSuit = SUITS[Math.floor(Math.random() * SUITS.length)];
   let randomValue = VALUES[Math.floor(Math.random() * VALUES.length)];
@@ -30,6 +30,11 @@ window.onload = function() {
   // Get HTML elements.
   let valueElement = document.getElementsByClassName("value")[0]; // One element.
   let suitElements = document.getElementsByClassName("suit"); // Two elements.
+
+  // Default colour is black.
+  suitElements[0].style.color = "black";
+  suitElements[1].style.color = "black";
+  valueElement.style.color = "black";
 
   valueElement.innerHTML = randomValue;
   suitElements[0].innerHTML = randomSuit;
@@ -40,4 +45,11 @@ window.onload = function() {
     suitElements[1].style.color = "red";
     valueElement.style.color = "red";
   }
-};
+}
+
+// Change card on load.
+window.onload = changeCard();
+
+// Change when button is pressed.
+let changeButton = document.getElementsByClassName("change-card")[0];
+changeButton.addEventListener("click", event => changeCard());
