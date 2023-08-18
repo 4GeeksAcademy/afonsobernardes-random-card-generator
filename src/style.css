@@ -1,1 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+h1.value {
+  font-size: 150px !important;
+}
+
+.suit {
+  font-size: 25vh;
+}
